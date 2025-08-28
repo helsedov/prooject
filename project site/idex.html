@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Пасхалки и Love U</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#" class="nav-link active" data-section="home">Главная</a>
+            <a href="#" class="nav-link" data-section="puzzle">Пасхалки</a>
+            <a href="#" class="nav-link" data-section="card">Визитка</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <!-- Главная страница -->
+        <section id="home" class="active-section">
+            <h1>Добро пожаловать на сайт с пасхалками!</h1>
+            <div class="instructions">
+                <h2>Как играть</h2>
+                <p>Перейдите на страницу "Пасхалки" и найдите все буквы. Когда вы найдете все буквы в правильном порядке, появится секретное сообщение!</p>
+                <p>Цветовая схема сайта:</p>
+                <ul>
+                    <li>Фон: очень светло серый (#f5f5f5)</li>
+                    <li>Текст: темно графитовый (#333333)</li>
+                    <li>Акцент: оранжево-кораловый (#ff7f50)</li>
+                </ul>
+            </div>
+            
+            <!-- Блок со стихом -->
+            <div class="poem-container">
+                <div class="poem-text">
+                    Здесь будет ваш стих<br>
+                    Вы можете написать сюда любой текст<br>
+                    Это центральный блок на главной странице<br>
+                    С красивым оформлением и акцентами
+                </div>
+                <div class="poem-author">Ваше имя</div>
+                <button class="secret-btn" id="secretBtn"></button>
+            </div>
+        </section>
+
+        <!-- Страница с пасхалками -->
+        <section id="puzzle">
+            <h1>Найди все буквы!</h1>
+            <div class="instructions">
+                <p>Нажимайте на карточки, чтобы найти буквы. Когда найдете все буквы в правильном порядке, появится секретное сообщение.</p>
+            </div>
+            
+            <div class="puzzle-grid" id="puzzleGrid">
+                <!-- Карточки будут генерироваться JavaScript -->
+            </div>
+            
+            <div class="message" id="message">Найдите букву L</div>
+            <div class="love-message" id="loveMessage">Love U ❤️</div>
+            
+            <button class="reset-btn" id="resetBtn">Начать заново</button>
+        </section>
+
+        <!-- Страница с визиткой -->
+        <section id="card">
+            <h1>Визитная карточка</h1>
+            <div class="card-container">
+                <div class="business-card">
+                    <div class="card-header">
+                        <div class="card-name">Иван Петров</div>
+                        <div class="card-title">Веб-дизайнер</div>
+                    </div>
+                    <div class="card-info">
+                        <div><span class="card-icon"></span> +7 (999) 123-45-67</div>
+                        <div><span class="card-icon"></span> ivan@example.com</div>
+                        <div><span class="card-icon"></span> www.ivanpetrov.ru</div>
+                    </div>
+                </div>
+            </div>
+            <div class="instructions">
+                <h2>Контактная информация</h2>
+                <p>Это пример визитной карточки с использованием заданной цветовой схемы.</p>
+                <p>Фон: светло серый | Текст: графитовый | Акцент: оранжево-кораловый</p>
+            </div>
+        </section>
+    </div>
+
+    <!-- Модальное окно с признанием -->
+    <div class="confession-modal" id="confessionModal">
+        <div class="confession-content">
+            <span class="close-modal" id="closeModal">&times;</span>
+            <h2>Секретное признание</h2>
+            <p style="font-size: 1.3em; margin: 20px 0; color: #ff7f50;">
+                Я хочу сказать тебе, что ты самый замечательный человек на свете!
+            </p>
+            <p>С любовью, твой тайный поклонник ❤️</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Сайт с пасхалками. Все права защищены.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

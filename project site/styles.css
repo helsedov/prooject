@@ -1,0 +1,317 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5; /* Очень светло серый */
+    color: #333333; /* Темно графитовый */
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333333;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #ff7f50; /* Оранжево-кораловый */
+    color: white;
+}
+
+.active {
+    background-color: #ff7f50;
+    color: white;
+}
+
+section {
+    display: none;
+    padding: 40px 0;
+}
+
+.active-section {
+    display: block;
+}
+
+h1, h2, h3 {
+    color: #333333;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2.5em;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2em;
+    border-bottom: 3px solid #ff7f50;
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+.puzzle-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    margin: 30px 0;
+}
+
+.puzzle-card {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.puzzle-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.puzzle-card.found {
+    background-color: #ff7f50;
+    color: white;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.message {
+    text-align: center;
+    font-size: 1.2em;
+    margin: 20px 0;
+    min-height: 50px;
+}
+
+.love-message {
+    font-size: 2em;
+    color: #ff7f50;
+    text-align: center;
+    margin: 30px 0;
+    font-weight: bold;
+    display: none;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+}
+
+.business-card {
+    width: 350px;
+    height: 200px;
+    background: linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    padding: 25px;
+    position: relative;
+    overflow: hidden;
+}
+
+.business-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent, rgba(255, 127, 80, 0.1), transparent);
+    transform: rotate(45deg);
+}
+
+.card-header {
+    border-bottom: 2px solid #ff7f50;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+
+.card-name {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #333333;
+}
+
+.card-title {
+    color: #ff7f50;
+    font-weight: 600;
+    margin-top: 5px;
+}
+
+.card-info {
+    margin-top: 20px;
+}
+
+.card-info div {
+    margin: 8px 0;
+    display: flex;
+    align-items: center;
+}
+
+.card-icon {
+    width: 20px;
+    height: 20px;
+    background-color: #ff7f50;
+    border-radius: 50%;
+    margin-right: 10px;
+    display: inline-block;
+}
+
+.instructions {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.reset-btn {
+    background-color: #ff7f50;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    display: block;
+    margin: 30px auto;
+    transition: all 0.3s ease;
+}
+
+.reset-btn:hover {
+    background-color: #ff6347;
+    transform: scale(1.05);
+}
+
+.poem-container {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    text-align: center;
+    margin: 40px 0;
+    position: relative;
+}
+
+.poem-text {
+    font-size: 1.2em;
+    line-height: 1.8;
+    font-style: italic;
+    color: #555;
+}
+
+.poem-author {
+    margin-top: 20px;
+    font-weight: bold;
+    color: #ff7f50;
+}
+
+.secret-btn {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.confession-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.confession-content {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+    max-width: 500px;
+    width: 90%;
+    position: relative;
+}
+
+.confession-content h2 {
+    color: #ff7f50;
+    border: none;
+}
+
+.close-modal {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 1.5em;
+    cursor: pointer;
+    color: #333;
+}
+
+footer {
+    background-color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .puzzle-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .business-card {
+        width: 300px;
+        height: 180px;
+    }
+}
